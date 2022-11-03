@@ -14,7 +14,7 @@ public class UnderGraduateStudent extends Student {
             testScore += (super.getTestScore(i));
         }
 
-        testScore = testScore/super.getNumTests();
+        testScore = testScore / super.getNumTests();
 
         System.out.println("Average: " + testScore);
 
