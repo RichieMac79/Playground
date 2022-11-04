@@ -32,7 +32,7 @@ public class Rectangle extends Shapes {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Rectangle: " + getArea();
     }
 
     @Override
