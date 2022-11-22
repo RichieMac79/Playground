@@ -10,7 +10,7 @@ public class Student {
 
 
     // constructor d
-    public Student(){
+    public Student() {
         this.testScore = new int[NUM_TESTS];
     }
 
@@ -23,22 +23,22 @@ public class Student {
 
     // Mutator/Setter
     public void setName(String name) {
-        this.name= name;
+        this.name = name;
     }
 
     // Mutator/Setter
     public void setIDNumber(long IDNumber) {
-        this.IDNumber=IDNumber;
+        this.IDNumber = IDNumber;
     }
 
     // Mutator/Setter
     public void setgrade(String grade) {
-        this.grade=grade;
+        this.grade = grade;
     }
 
     // Mutator/Setter
     public void setTestScore(int testNumber, int testScore) {
-        this.testScore[testNumber]=testScore;
+        this.testScore[testNumber] = testScore;
     }
 
     // Accessor/ Getter
@@ -62,7 +62,7 @@ public class Student {
     }
 
     // Accessor/ Getter
-    public String getGrade( ) {
+    public String getGrade() {
         return grade;
     }
 

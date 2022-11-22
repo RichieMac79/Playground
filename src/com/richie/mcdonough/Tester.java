@@ -1,7 +1,5 @@
 package com.richie.mcdonough;
 
-import java.lang.reflect.Array;
-
 public class Tester {
     public static void main(String[] args) {
         Student student1 = new Student();

@@ -8,11 +8,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int count = 0;
-        while(count != -1) {
+        while (count != -1) {
             System.out.println("Please enter a number: ");
             count = scanner.nextInt();
-            Integer countInt = Integer.valueOf(count);
+            Integer countInt = count;
             System.out.println("Number of digits: " + countInt.toString().length());
-    }
+        }
     }
 }
