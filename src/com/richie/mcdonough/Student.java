@@ -5,7 +5,7 @@ public class Student {
 
     private long IDNumber;
 
-    public Student(){};
+    public Student(){}
 
     public Student(String name, long IDNumber) {
         this.name = name;

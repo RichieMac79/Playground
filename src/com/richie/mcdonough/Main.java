@@ -11,7 +11,7 @@ public class Main {
         while(count != -1) {
             System.out.println("Please enter a number: ");
             count = scanner.nextInt();
-            Integer countInt = new Integer(count);
+            Integer countInt = Integer.valueOf(count);
             System.out.println("Number of digits: " + countInt.toString().length());
     }
     }

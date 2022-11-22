@@ -5,8 +5,8 @@ public class Student {
     private String name;
     private long IDNumber;
     private String grade;
-    private int[] testScore;
-    private int NUM_TESTS = 3;
+    private final int[] testScore;
+    private final int NUM_TESTS = 3;
 
 
     // constructor d
