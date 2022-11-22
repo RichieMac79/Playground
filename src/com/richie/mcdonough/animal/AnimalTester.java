@@ -55,7 +55,7 @@ public class AnimalTester {
 
     public static void serialize(LinkedList<Animal> animals) throws IOException, ClassNotFoundException {
 
-        FileOutputStream fileStream = new FileOutputStream("testSer.txt");
+        FileOutputStream fileStream = new FileOutputStream("testSerAnimal.txt");
         ObjectOutputStream out = new ObjectOutputStream(fileStream);
         for (Animal animal : animals) {
             out.writeObject(animal);
@@ -65,7 +65,7 @@ public class AnimalTester {
     }
 
     public static void deserialize() throws IOException, ClassNotFoundException {
-        FileInputStream fileIn = new FileInputStream("testSer.txt");
+        FileInputStream fileIn = new FileInputStream("testSerAnimal.txt");
         ObjectInputStream in = new ObjectInputStream(fileIn);
         try {
             Animal animal;
