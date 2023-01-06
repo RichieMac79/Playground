@@ -3,14 +3,14 @@ package com.richie.mcdonough.algorithms;
 public class Unique {
     public static void main(String[] args) {
         int[] nValues = new int[] {10,18,2,4,6,2,7,8,9,7,10};
-        int[] uniqueSorted = unique(nValues);
+        int[] uniqueSorted = uniqueSorted(nValues);
 
         for(int n: uniqueSorted) {
             System.out.println(n);
         }
     }
 
-    public static int[] unique (int[] nValues) {
+    public static int[] uniqueSorted (int[] nValues) {
         // Get Unique Values
         int[] uniqueSorted = new int[nValues.length];
         int highestFreePosition = 0;
