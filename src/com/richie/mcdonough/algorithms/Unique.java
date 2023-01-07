@@ -11,36 +11,35 @@ public class Unique {
     }
 
     public static int[] uniqueSorted (int[] nValues) {
-        // Get Unique Values
-        int[] uniqueSorted = new int[nValues.length];
-        int highestFreePosition = 0;
-
-        for(int i = 0; i<nValues.length; i++) {
-            int n = nValues[i];
-
-            boolean containsNumber = false;
-            for(int g = 0; g < uniqueSorted.length; g++) {
-                if (n == uniqueSorted[g]) {
-                    containsNumber = true;
-                    break;
+        // Sort Array
+        // For each number
+        for (int i = 0; i < nValues.length; i++) {
+            // Check numbers to right
+            for (int j = i + 1; j < nValues.length; j++) {
+                int tmp = 0;
+                // If number on left is greater than one to right
+                if (nValues[i] > nValues[j]) {
+                    // Swap places
+                    tmp = nValues[i];
+                    nValues[i] = nValues[j];
+                    nValues[j] = tmp;
                 }
-            }
-
-            if(containsNumber == false) {
-                uniqueSorted[highestFreePosition] = n;
-                highestFreePosition++;
             }
         }
 
-        // Sort Array
-        for (int i = 0; i < uniqueSorted.length; i++) {
-            for (int j = i + 1; j < uniqueSorted.length; j++) {
-                int tmp = 0;
-                if (uniqueSorted[i] > uniqueSorted[j]) {
-                    tmp = uniqueSorted[i];
-                    uniqueSorted[i] = uniqueSorted[j];
-                    uniqueSorted[j] = tmp;
-                }
+        // Get Unique Values
+        int[] uniqueSorted = new int[nValues.length];
+        uniqueSorted[0] = nValues[0]; // First number is always going in
+        int uniqueSortedIndex = 1; // Index for next number to go in
+        int currentUniqueNumber = nValues[0]; // First number
+
+        // Start on second number
+        for(int i = 1; i<nValues.length; i++) {
+            int nextNumber = nValues[i];
+            if(currentUniqueNumber != nextNumber) {
+                uniqueSorted[uniqueSortedIndex] = nextNumber;
+                currentUniqueNumber = nextNumber;
+                uniqueSortedIndex++;
             }
         }
 
